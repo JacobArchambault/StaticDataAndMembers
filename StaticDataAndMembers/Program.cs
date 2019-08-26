@@ -14,16 +14,16 @@ namespace StaticDataAndMembers
             // Make an account.
             SavingsAccount s1 = new SavingsAccount(50);
 
-            // Print the current interest rate.
-            Console.WriteLine("Interest Rate is: {0}", SavingsAccount.GetInterestRate());
+            // Print the current interest rate via property.
+            Console.WriteLine("Interest Rate is: {0}", SavingsAccount.InterestRate);
 
             // Try to change the interest rate via property.
-            SavingsAccount.SetInterestRate(0.08);
+            SavingsAccount.InterestRate = 0.08;
 
             // Make a second account.
             SavingsAccount s2 = new SavingsAccount(100);
 
-            Console.WriteLine("Interest Rate is: {0}", SavingsAccount.GetInterestRate());
+            Console.WriteLine("Interest Rate is: {0}", SavingsAccount.InterestRate);
             Console.ReadLine();
         }
     }
