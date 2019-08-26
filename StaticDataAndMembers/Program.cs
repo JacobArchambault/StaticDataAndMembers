@@ -11,14 +11,18 @@ namespace StaticDataAndMembers
         static void Main(string[] args)
         {
             Console.WriteLine("***** Fun with Static Data *****\n");
+            // Make an account.
             SavingsAccount s1 = new SavingsAccount(50);
-            SavingsAccount s2 = new SavingsAccount(100);
 
             // Print the current interest rate.
             Console.WriteLine("Interest Rate is: {0}", SavingsAccount.GetInterestRate());
 
-            // Make new object, this does NOT 'reset' the interest rate.
-            SavingsAccount s3 = new SavingsAccount(10000.75);
+            // Try to change the interest rate via property.
+            SavingsAccount.SetInterestRate(0.08);
+
+            // Make a second account.
+            SavingsAccount s2 = new SavingsAccount(100);
+
             Console.WriteLine("Interest Rate is: {0}", SavingsAccount.GetInterestRate());
             Console.ReadLine();
         }
